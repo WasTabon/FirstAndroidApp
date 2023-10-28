@@ -1,38 +1,32 @@
 package com.example.testone
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.VibrationAttributes
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val john = Cat("John", 3)
-        val bob: Animal = Cat("Bob", 1)
+        val Bon = Cat(getString(R.string.cat_name_Bon), getString(R.string.cat_description_Bon), R.drawable.baseline_sanitizer)
+        val Ben = Cat(getString(R.string.cat_name_Ben), getString(R.string.cat_description_Ben), R.drawable.baseline_sanitizer)
+        val Bin = Cat(getString(R.string.cat_name_Bin), getString(R.string.cat_description_Bin), R.drawable.baseline_sanitizer)
 
-        val dir = GetDirestion()
+        val buttonDetailsBon = findViewById<Button>(R.id.CatOneDetails)
+        val buttonDetailsBen = findViewById<Button>(R.id.CatTwoDetails)
+        val buttonDetailsBin = findViewById<Button>(R.id.CatThreeDetails)
 
-        when(dir)
-        {
-            Direction.NORTH -> Double(4)
-            Direction.WEST -> Double(4)
-            Direction.SOUTH -> Double(4)
-            Direction.EAST -> Double(4)
-
-            else -> Double(5)
+        buttonDetailsBon.setOnClickListener {
+            val intent = Intent(this, DescActivity::class.java)
+            startActivity(intent)
         }
     }
 
-    private fun Double(x: Int) : Int
-    {
-        return x * 2
-    }
+    
 
-    private fun GetDirestion() : Direction
-    {
-        return Direction.NORTH
-    }
 }

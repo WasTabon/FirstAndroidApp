@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">TestOne</string>
+    <string name="details">Details</string>
+    <string name="cat_name_Ben">Ben</string>
+    <string name="cat_name_Bon">Bon</string>
+    <string name="cat_name_Bin">Bin</string>
+    <string name="cat_description_Ben">Fat and little bit lazy</string>
+    <string name="cat_description_Bon">Very cool cat, love him</string>
+    <string name="cat_description_Bin">Mini bin</string>
+    <string name="animal_application">Animal Application</string>
 </resources>
